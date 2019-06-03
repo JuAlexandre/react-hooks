@@ -15,9 +15,11 @@ const App = () => {
     return (
         <div className="container mt-4">
             <div className="row">
-                <Form addPerson={addPerson} />
-                <People people={people} />
-                <NewestPerson newestPerson={people[people.length - 1]} />
+                <Form addPerson={ addPerson } />
+                <People people={ people } />
+                <NewestPerson newestPerson={ people[people.length - 1] }
+                              peopleCount={ people.length }
+                />
             </div>
         </div>
     );
