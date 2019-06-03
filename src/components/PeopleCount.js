@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 
-const PeopleCount = props => {
-    return (
-        <h2 className="mt-4 text-center">
-            { props.peopleCount }
-        </h2>
-    )
+import PeopleContext from '../context/peopleContext';
+
+const PeopleCount = () => {
+    const context = useContext(PeopleContext);
+
+    return <h2 className="mt-4 text-center">{ context.people.length }</h2>;
 };
 
 export default PeopleCount;
